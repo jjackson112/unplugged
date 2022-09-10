@@ -153,7 +153,7 @@ aside {
   flex-flow: row wrap;
 }
 
-.features {
+.features .content-wrapper {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
@@ -165,6 +165,11 @@ aside {
 
 .features p {
   margin: 0;
+}
+
+.features i {
+	font-size: 3.75em;
+        margin-bottom: 40px;
 }
 
 .features article {
@@ -206,7 +211,7 @@ aside {
 .google-map figure {
   position: relative;
   height: 0;
-  padding-bottom: 75%;
+  padding-bottom: 125%;
   overflow: hidden;
   width: 100%;
 }
