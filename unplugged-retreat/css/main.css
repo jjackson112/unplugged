@@ -128,12 +128,11 @@ header nav ul {
 }
 
 header nav li {
- 
+ list-style: none;
 }
 
 .header-divider {
   width: 100%;
-  margin:
 }
 
 /* Mobile Styles for Homepage*/
@@ -142,6 +141,9 @@ header nav li {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-flow: row wrap;
+  background: url ('img/retreat-hero-image.jpg') center no-repeat #333;
+  background-size: cover;
 }
 
 aside {
@@ -192,12 +194,29 @@ aside {
   width: 55%;
   margin: 20px 0;
 }
+/*About Page */
 
 .mission {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+}
+
+.google-map figure {
+  position: relative;
+  height: 0;
+  padding-bottom: 75%;
+  overflow: hidden;
+  width: 100%;
+}
+
+.google-map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%
 }
 
 .contact-section {
@@ -210,6 +229,8 @@ aside {
 .contact-content p {
   margin: 0;
 }
+
+/* FAQ Page */
 
 .faq {
   display: flex;
@@ -280,7 +301,7 @@ body {
 }
 
 ul, ol {
-
+  font-size: .8em;
 }
 
 a {
@@ -290,22 +311,24 @@ a {
 
 h2 {
   font-family: 'Poppins', sans-serif;
+  font-size: 1.5em;
 }
 
 h3, h4 {
   font-family: 'Poppins', sans-serif;
+  font-size: 1.25em;
 }
 
 p {
-
+  font-size: 1.5em;
 }
 
 img {
-
+  width: 100%;
 }
 
 figure {
-
+  margin: 0;
 }
 
 address {
@@ -439,7 +462,6 @@ input[type=button] {
   }
 
   header {
-    width: 90%;
     justify-content: space-around;
     flex-flow: row nowrap;
   }
@@ -450,7 +472,7 @@ input[type=button] {
   }
 
   header nav {
-    width: 30%;
+    width: 50%;
   }
 
   header nav ul {
@@ -463,24 +485,21 @@ input[type=button] {
 
   aside .content-wrapper {
     margin: 50px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
   }
 
   aside .content-wrapper .form-description, aside .content-wrapper .form {
-    width: 100%;
+    width: 50%;
     margin: 0;
-  }
-
-  aside .content-wrapper {
-    display: flex;
-    justify-content: space-around;
-    flex-flow: row nowrap;
   }
 
   .features article {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
   }
 
   .features .features-item-description {
@@ -488,23 +507,23 @@ input[type=button] {
   }
 
   .reviews article {
-    width: 100%;
+    display: flex;
+    justify-content: space-between;
   }
 
   .reviews article div {
-    width: 100%;
+    width: 50%;
   }
 
   footer .content-wrapper {
-    width: 100%;
+    width: 60%;
     margin: 100px 0;
   }
 
   .footer-content {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    flex-flow: row nowrap;
   }
 
   footer .contact {
@@ -512,7 +531,7 @@ input[type=button] {
   }
 
   footer .copyright {
-    width: 50%;
+    width: 100%;
   }
 
   /* About Page */
@@ -521,11 +540,11 @@ input[type=button] {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-flow: row nowrap;
+    padding-top: 20px;
   }
 
   .mission-content p {
-    width: 100%;
+    width: 50%;
   }
 
   .contact-section .content-wrapper h2 {
@@ -534,9 +553,8 @@ input[type=button] {
 
   .contact-content {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
   }
 
   /* FAQ Page */
@@ -557,6 +575,46 @@ input[type=button] {
 /* Desktop Styles */
 
 @media only screen and (max-width: 1200px) {
+
+  .content-wrapper {
+    max-width: 960px;
+  }
+
+  .hero-area h1 {
+    width:
+  }
+
+  aside .content-wrapper {
+    justify-content: 
+  }
+
+  aside .content-wrapper .form-description, aside .content-wrapper .form {
+    width:
+  }
+
+  .features h2 {
+    width:
+  }
+
+  .features article {
+    flex-basis:
+  }
+
+  .reviews article div {
+    flex-basis:
+  }
+
+/* About Page */
+
+.mission h2, .contact-section .content-wrapper h2 {
+  width:
+}
+
+/* FAQ Page */
+
+.faq h2 {
+  width: 100%;
+}
 
 }
 
