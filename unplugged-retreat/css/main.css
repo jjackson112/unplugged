@@ -104,13 +104,23 @@ header, footer {
 
 header {
   padding: 15px 0;
+  background-color: #202322;
 }
 
 header .content-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-flow: row wrap;
   margin: 0;
+}
+
+header figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  width: 60%;
 }
 
 header nav {
@@ -119,6 +129,7 @@ header nav {
   align-items: center;
   flex-flow: row wrap;
   width: 60%;
+  font-weight: 700;
 }
 
 header nav ul {
@@ -132,7 +143,10 @@ header nav li {
 }
 
 .header-divider {
+  height: 1;
   width: 100%;
+  margin: 10px 0;
+  border: 1px solid silver;
 }
 
 /* Mobile Styles for Homepage*/
@@ -142,7 +156,7 @@ header nav li {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-  background:url('img/retreat-hero-image.jpg') center no-repeat #333;
+  background: url("../img/mobile-hero-image.jpg") center no-repeat #333;
   background-size: cover;
 }
 
@@ -151,12 +165,22 @@ aside {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  background-color: #527158;
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  background: url('../img/features-background.jpg') center no-repeat;
+  background-size: cover;
 }
 
 .features .content-wrapper {
   display: flex;
+  align-items: center;
   justify-content: center;
-  flex-flow: row wrap;
+  flex-flow: column nowrap;
 }
 
 .features h2 {
@@ -164,6 +188,7 @@ aside {
 }
 
 .features p {
+  text-align: center;
   margin: 0;
 }
 
@@ -173,33 +198,42 @@ aside {
 }
 
 .features article {
-  width: 30%;
+  width: 50%;
   margin: 30px 0;
 }
 
 .features .features-item-description {
   display: flex;
-  justify-content: space-around;
-  align-items: space-between;
+  justify-content: center;
+  align-items: center;
   flex-flow: row wrap;
 }
 
 .reviews {
-  width: 100%;
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
+  background-color: #2a423a;
 }
 
-.review h2 {
+.reviews h2 {
   margin-bottom: 30px;
+  line-height: 1;
 }
 
 .reviews h3 {
   width: 55%;
   margin: 20px 0;
 }
-/*About Page */
+
+.review-content {
+  display: flex;
+  justify-content: center;
+  flex-flow: column nowrap;
+  padding: 25px 0;
+}
+
+/*Mobile Styles for About Page */
 
 .mission {
   display: flex;
@@ -208,10 +242,14 @@ aside {
   flex-flow: row wrap;
 }
 
+.mission-content {
+  background-color: #527158;
+}
+
 .google-map figure {
   position: relative;
   height: 0;
-  padding-bottom: 125%;
+  padding-bottom: 75%;
   overflow: hidden;
   width: 100%;
 }
@@ -235,7 +273,7 @@ aside {
   margin: 0;
 }
 
-/* FAQ Page */
+/*Mobile Styles for FAQ Page */
 
 .faq {
   display: flex;
@@ -263,26 +301,9 @@ aside {
 /* Footer */
 
 footer {
- flex-direction: column;
-}
-
-footer p {
-  margin: 0;
-}
-footer .contact {
-  margin-bottom: 50px;
-}
-
-footer .social-icons {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-footer .social-icons p{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  background-color: #202322;
 }
 
 footer .content-wrapper {
@@ -290,8 +311,35 @@ footer .content-wrapper {
   margin: 50px 0;
 }
 
+footer p {
+  margin: 0;
+}
+
+footer .contact {
+  margin-bottom: 50px;
+}
+
+footer .social-icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #527158;
+  border-radius: 20%;
+}
+
+footer .social-icons p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .social-icons p i {
+  font-size: 1.3125em;
+}
+
 footer .copyright {
   margin: 20px 0;
+  padding-top: 25px;
 }
 
 /* General Styles*/
@@ -303,10 +351,15 @@ html {
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 1em;
+  color: #e2e3ed;
+  text-align: left;
 }
 
 ul, ol {
   font-size: .8em;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin: 0;
 }
 
 a {
@@ -317,15 +370,19 @@ a {
 h2 {
   font-family: 'Poppins', sans-serif;
   font-size: 1.5em;
+  font-weight: 500;
+  margin: 0;
 }
 
 h3, h4 {
   font-family: 'Poppins', sans-serif;
   font-size: 1.25em;
+  font-weight: 500;
+  margin: 20px 0;
 }
 
 p {
-  font-size: 1.5em;
+  font-size: 1.25em;
 }
 
 img {
@@ -337,15 +394,20 @@ figure {
 }
 
 address {
-
+  font-style: normal;
 }
 
 .content-wrapper {
-
+  width: 90%;
+  margin: 50px 0;
 }
 
 aside .form {
   margin-top: 30px;
+}
+
+aside .form h2 {
+  padding: 10px 0;
 }
  
 input[type=text] {
