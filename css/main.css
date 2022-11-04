@@ -88,10 +88,7 @@ textarea {
    ========================================================================== */
  /*------ Base Header - Footer Styles -------*/
 
-.content-wrapper {
-  width: 90%;
-  margin: 50px 0;
-}
+
 
 /* Header Styles */
 
@@ -129,6 +126,7 @@ header nav {
   align-items: center;
   flex-flow: row wrap;
   width: 60%;
+  font-size: 1em;
   font-weight: 700;
 }
 
@@ -143,9 +141,9 @@ header nav li {
 }
 
 .header-divider {
-  height: 1;
+  height: 1px;
   width: 100%;
-  margin: 10px 0;
+  margin: 10px 0 20px 0;
   border: 1px solid silver;
 }
 
@@ -163,6 +161,7 @@ header nav li {
 
 .hero-area h1 {
   line-height: 1.5em;
+  font-size: 2em;
 }
 
 aside {
@@ -175,7 +174,6 @@ aside {
 
 aside .content-wrapper {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 100%;
@@ -265,26 +263,25 @@ input[type=button] {
   padding: 15px 15px;
 }
 
+.reviews article .review-photo, .reviews article .review-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
 .reviews h2 {
   margin-bottom: 30px;
   line-height: 1;
 }
 
-.review-photo img {
-  width: 100%;
-}
 
 .reviews h3 {
   width: 55%;
   margin: 20px 0;
 }
 
-.review-content {
-  display: flex;
-  justify-content: center;
-  flex-flow: column nowrap;
-  padding: 25px 0;
-}
+
 
 /*Mobile Styles for About Page */
 
@@ -338,7 +335,7 @@ input[type=button] {
   background-color: #527158;
 }
 
-.faq content-wrapper {
+.faq .content-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -391,8 +388,8 @@ footer .social-icons p{
   align-items: center;
   background-color: #527158;
   border-radius: 40%;
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
 }
 
 footer .social-icons p i {
@@ -554,7 +551,7 @@ address {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   /* Style adjustments for viewports that meet the condition */
 
   .content-wrapper {
@@ -571,6 +568,7 @@ address {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    padding: 10px 20px;
   }
 
   header figure {
@@ -578,7 +576,7 @@ address {
   }
 
   header nav {
-    width: 30%;
+    width: 40%;
   }
 
   header nav ul {
@@ -601,10 +599,12 @@ address {
   }
 
   aside .content-wrapper {
-    margin: 50px 0;
+    margin: 0;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     flex-flow: row wrap;
+    padding: 15px 15px;
   }
   
   aside .content-wrapper .form-description,
@@ -644,11 +644,11 @@ address {
     font-size: 3.5em;
   }
 
-  .reviews article, .reviews article div {
+  .reviews article {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-bottom: 60px;
+    flex-flow: row;
   }
 
   .reviews h3 {
@@ -656,6 +656,7 @@ address {
     width: 85%;
     font-style: normal;
     margin: 0;
+    text-align: center;
   }
 
   footer .content-wrapper {
@@ -686,6 +687,7 @@ address {
   footer .social-icons {
     justify-content: center;
     padding-bottom: 15px;
+    column-gap: 10px;
   }
 
   footer .copyright {
@@ -754,14 +756,29 @@ address {
 
 /* Desktop Styles */
 
-@media only screen and (max-width: 1200px) {
+@media screen and (min-width: 1200px) {
 
   .content-wrapper {
     max-width: 960px;
   }
 
   .hero-area h1 {
+    font-size: 3.75em;
     width: 80%;
+  }
+
+  h2 {
+    font-size: 2.25em;
+  }
+
+  h3,
+  h4 {
+      font-size: 1.875em;
+  }
+
+  p {
+      font-size: 1.125em;
+      line-height: 1.333;
   }
 
   aside .content-wrapper {
@@ -780,9 +797,18 @@ address {
     flex-basis: 30%;
   }
 
-  .reviews article div {
-    flex-basis: 40%;
+  .reviews h2 {
+    padding-bottom: 30px; 
   }
+  
+  .reviews article div {
+    width: 42%;
+  }
+
+  footer h4 {
+    font-size: 1.875em;
+  }
+
 
 /* About Page */
 
@@ -794,6 +820,23 @@ address {
 
 .faq h2 {
   width: 100%;
+  font-size: 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.faq .content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.faq p {
+  font-size: 1.125em;
+  line-height: 1;
 }
 
 }
