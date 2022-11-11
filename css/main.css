@@ -174,9 +174,11 @@ aside {
 
 aside .content-wrapper {
   display: flex;
+  text-align: center;
   align-items: center;
   flex-direction: column;
   width: 100%;
+  padding: 15px 25px;
 }
 
 aside h2 {
@@ -265,23 +267,29 @@ input[type=button] {
 
 .reviews article .review-photo, .reviews article .review-content {
   display: flex;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 100%;
 }
 
 .reviews h2 {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   line-height: 1;
+  padding: 0 25px;
+  text-align: center;
 }
 
 
 .reviews h3 {
   width: 55%;
   margin: 20px 0;
+  text-align: center;
 }
 
-
+.review-content p {
+  line-height: 1.25;
+}
 
 /*Mobile Styles for About Page */
 
@@ -429,14 +437,14 @@ a {
 
 h2 {
   font-family: 'Poppins', sans-serif;
-  font-size: 1.5em;
+  font-size: 1.6em;
   font-weight: 500;
   margin: 0;
 }
 
 h3, h4 {
   font-family: 'Poppins', sans-serif;
-  font-size: 1.25em;
+  font-size: 1.4em;
   font-weight: 500;
   margin: 20px 0;
 }
@@ -641,22 +649,41 @@ address {
   }
 
   .reviews h2 {
-    font-size: 3.5em;
+   font-size: 2.5em;
+   text-align: left;
+   margin: 0;
+  }
+
+  .reviews .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row nowrap;
   }
 
   .reviews article {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-flow: row;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 10px 15px;
   }
 
   .reviews h3 {
-    font-size: 2em;
-    width: 85%;
+    font-size: 1.7em;
+    width: 100%;
     font-style: normal;
     margin: 0;
     text-align: center;
+  }
+
+  .review-photo img {
+    width: 95%;
+    height: 250px;
+  }
+  
+  .review-content p {
+    font-size: 1.25em;
+    line-height: 1.65;
   }
 
   footer .content-wrapper {
@@ -794,6 +821,7 @@ address {
   }
 
   .reviews h2 {
+    font-size: 3em;
     padding-bottom: 10px; 
   }
   
@@ -802,8 +830,17 @@ address {
   }
   
 .review-photo img {
-  width: 100%;
-  height: 300px;
+  width: 95%;
+  height: 350px;
+}
+
+.reviews h3 {
+  font-size: 1.9em;
+}
+
+.review-content p {
+  font-size: 1.5em;
+  line-height: 1.65;
 }
 
   footer h4 {
